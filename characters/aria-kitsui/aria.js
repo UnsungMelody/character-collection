@@ -86,9 +86,6 @@ function hideTerminal() {
     content_container.style.display = "flex"
 }
 
-//DEBUG
-hideTerminal()
-
 /* ========== Main content ========== */
 
 // randomizer
