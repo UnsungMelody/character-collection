@@ -1,0 +1,209 @@
+/* SCP Font */
+/* font-family: 'BauhausLTDemi', arial; BOLD */
+@import url(https://scp-wiki.wdfiles.com/local--files/component%3Atheme/font-bauhaus.css);
+/* Special Elite */
+@font-face {
+  font-family: 'Special Elite';
+  src: url("assets/SpecialElite-Regular.ttf"); }
+body, html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black; }
+  body > div {
+    display: flex;
+    width: 100%; }
+
+/* ============ loading screen ============ */
+div#loading_container {
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+  div#loading_container p {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 12px; }
+  div#loading_container span#green_console {
+    color: #6aa84f; }
+  div#loading_container span#blue_console {
+    color: #4a86e8; }
+  div#loading_container > main {
+    width: 50vw;
+    border-radius: 5px;
+    background-color: #3e3d39; }
+    div#loading_container > main div {
+      display: flex; }
+    div#loading_container > main header div {
+      padding: 5px; }
+    div#loading_container > main header #terminal_header_top {
+      background-color: #58564e;
+      border-radius: 5px 5px 0 0;
+      display: flex;
+      justify-content: center; }
+      div#loading_container > main header #terminal_header_top #close_terminal {
+        position: absolute;
+        right: 25.5vw;
+        background-color: red;
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        cursor: pointer; }
+    div#loading_container > main header #terminal_header_bottom p {
+      margin-right: 10px; }
+    div#loading_container > main section {
+      background-color: #2d0922;
+      border-radius: 0 0 5px 5px;
+      height: 50vh;
+      padding: 5px; }
+
+/* phone */
+@media screen and (max-width: 480px) {
+  div#loading_container {
+    align-items: stretch; }
+    div#loading_container main {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      div#loading_container main header > #terminal_header_top > #close_terminal {
+        right: 5px; }
+      div#loading_container main section {
+        height: auto;
+        flex: 1; } }
+/* ============ MAIN CONTENT ============ */
+div#content_container {
+  padding: 25px;
+  display: none;
+  height: 100%;
+  flex-direction: column; }
+  div#content_container > header {
+    display: flex;
+    gap: 5px;
+    align-items: center; }
+    div#content_container > header nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 5px;
+      height: 80px; }
+      div#content_container > header nav button {
+        height: 50px;
+        padding: 5px;
+        font-size: 12px;
+        font-family: 'Special Elite';
+        font-weight: bold;
+        color: black;
+        border: none;
+        border-radius: 5px 5px 0 0;
+        background-color: #a19274;
+        cursor: pointer;
+        transition: color 0.3s, filter 0.3s; }
+        div#content_container > header nav button[data-active="false"] {
+          filter: brightness(0.8); }
+          div#content_container > header nav button[data-active="false"]:hover {
+            color: white;
+            filter: brightness(1); }
+    div#content_container > header #character_title {
+      color: white;
+      font-size: 35px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold; }
+  div#content_container #pages_container {
+    height: 100%;
+    background-color: #a19274;
+    border-radius: 5px 0 5px 5px;
+    padding: 25px; }
+    div#content_container #pages_container > section {
+      padding: 10px;
+      /* background-color: #e0dbd5; */
+      height: 100%;
+      /* ========== OVERVIEW PAGE ========== */
+      /* ========== DISABLE PAGE ========== */ }
+      div#content_container #pages_container > section::-webkit-scrollbar {
+        width: 5px; }
+      div#content_container #pages_container > section::-webkit-scrollbar-track {
+        background: #e0dbd5;
+        border-radius: 10px; }
+      div#content_container #pages_container > section::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px; }
+      div#content_container #pages_container > section::-webkit-scrollbar-thumb:hover {
+        background: #555; }
+      div#content_container #pages_container > section[data-page="overview"] {
+        gap: 20px;
+        display: flex; }
+        div#content_container #pages_container > section[data-page="overview"] aside {
+          background-color: #e0dbd5;
+          padding: 20px;
+          flex: 1; }
+          div#content_container #pages_container > section[data-page="overview"] aside > p {
+            font-family: 'Special Elite';
+            font-weight: bold;
+            position: relative;
+            rotate: -35deg;
+            transform: translate(-20px, 20px);
+            font-size: 20px;
+            color: rgba(255, 0, 0, 0.582);
+            width: 120px; }
+          div#content_container #pages_container > section[data-page="overview"] aside header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            font-family: 'BauhausLTDemi', Arial; }
+            div#content_container #pages_container > section[data-page="overview"] aside header img {
+              width: calc(100vw / 6.4);
+              max-width: 100px; }
+            div#content_container #pages_container > section[data-page="overview"] aside header h1 {
+              font-size: 20px; }
+            div#content_container #pages_container > section[data-page="overview"] aside header h2 {
+              font-size: 18px; }
+            div#content_container #pages_container > section[data-page="overview"] aside header h3 {
+              font-size: 12px;
+              font-style: italic; }
+          div#content_container #pages_container > section[data-page="overview"] aside main {
+            font-family: 'Special Elite'; }
+            div#content_container #pages_container > section[data-page="overview"] aside main p {
+              font-size: 16px; }
+            div#content_container #pages_container > section[data-page="overview"] aside main h1 {
+              margin-top: 10px;
+              font-size: 18px; }
+            div#content_container #pages_container > section[data-page="overview"] aside main img {
+              display: none;
+              height: 30vh;
+              width: 100%;
+              object-fit: cover; }
+      div#content_container #pages_container > section[data-active="false"] {
+        display: none; }
+
+/* phone */
+@media screen and (max-width: 480px) {
+  div#content_container {
+    padding: 10px; }
+    div#content_container > header {
+      flex-direction: column;
+      align-items: center; }
+      div#content_container > header nav {
+        justify-content: flex-start; }
+        div#content_container > header nav button {
+          height: auto; }
+      div#content_container > header #character_title {
+        font-size: 2rem; }
+    div#content_container #pages_container {
+      border-radius: 5px; }
+      div#content_container #pages_container > section {
+        /* ========== OVERVIEW PAGE ========== */
+        /* ========== DISABLE PAGE ========== */ }
+        div#content_container #pages_container > section[data-page="overview"] {
+          overflow-y: scroll;
+          display: grid;
+          grid-template-rows: 100% 100%; }
+          div#content_container #pages_container > section[data-page="overview"] aside {
+            flex: 1;
+            height: 100%; }
+        div#content_container #pages_container > section[data-active="false"] {
+          display: none; } }
